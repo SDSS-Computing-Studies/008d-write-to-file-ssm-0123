@@ -29,3 +29,15 @@ task2.txt contents:
 
 (3 points)
 """
+
+def test1():
+    file1 = open('task2.txt','w')
+    while True:
+        a = input("Enter a number: ")
+        if a != "":
+            file1.write(a+"\n")
+        elif a == "":
+            break
+        file1.close()
+
+test1()

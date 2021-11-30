@@ -16,3 +16,20 @@ task3.txt contents:
 ["frog","french","puppy","escalate","ice"]
 
 '''
+
+import json
+
+def test1():
+    list1 = []
+    file1 = open('task3.txt','w')
+    while True:
+        a = input("Enter a word: ")
+        if a != "":
+            list1.append(a)
+        if a == "":
+            break
+    printing = json.dumps(list1)
+    file1.write(printing+"\n")
+    file1.close()
+
+test1()
